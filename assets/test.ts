@@ -1,1 +1,0 @@
-console.log("thu tinh nang cai nha may mom");
