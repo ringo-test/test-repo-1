@@ -12,5 +12,10 @@ on:
 jobs:
   validate:
     uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
+    with:
+      max-image-size-mb: 5
+      max-image-dimension: 2048
+      require-meta: true
+      eslint-config-file: ""
   lint:
     uses: ringo-test/github-actions-common/.github/workflows/lint.yml@main
