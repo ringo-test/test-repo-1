@@ -1,0 +1,21 @@
+name: checks
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  checks:
+    uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
+    with:
+      branch-prefixes: feature,fix,refactor,chore,hotfix,test,docs
+      pr-prefixes: feature,fix,refactor,hotfix,docs
