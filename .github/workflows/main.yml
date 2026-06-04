@@ -1,0 +1,10 @@
+name: check
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  validate:
+    uses: ringo-test/github-action-common/.github/workflows/checks.yml@main
