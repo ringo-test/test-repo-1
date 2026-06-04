@@ -7,4 +7,4 @@ on:
 
 jobs:
   validate:
-    uses: ringo-test/github-action-common/.github/workflows/checks.yml@main
+    uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
