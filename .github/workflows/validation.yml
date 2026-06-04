@@ -1,0 +1,10 @@
+name: validate
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  validate:
+    uses: ringo-test/common-actions/.github/workflows/blank.yml@main
