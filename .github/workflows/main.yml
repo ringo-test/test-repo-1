@@ -3,8 +3,14 @@ name: check
 on:
   pull_request:
     branches:
+      - main
       - develop
+  push:
+    branches:
+      - main
 
 jobs:
   validate:
     uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
+  lint:
+    uses: ringo-test/github-actions-common/.github/workflows/lint.yml@main
