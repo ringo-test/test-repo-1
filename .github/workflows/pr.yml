@@ -1,0 +1,30 @@
+name: pr
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - reopened
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  pr:
+    uses: ringo-test/github-actions-common/.github/workflows/pr.yml@main
+    with:
+      eslint-config-file: ""
+      max-image-size-mb: 5
+      max-image-dimension: 2048
+      require-meta: true
+      detect-vietnamese-exclude: ""
+      detect-vietnamese-scan-scene: false
+      detect-vietnamese-scan-prefab: false
