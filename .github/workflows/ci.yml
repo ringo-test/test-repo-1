@@ -12,17 +12,41 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
-  id-token: write
 
 jobs:
-  checks:
-    uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
-    with:
-      action-repo: 'ringo-test/github-actions-common'
-      eslint-config-file: ""
-      max-image-size-mb: 5
-      max-image-dimension: 2048
-      require-meta: true
-      detect-vietnamese-exclude: ""
-      detect-vietnamese-scan-scene: false
-      detect-vietnamese-scan-prefab: false
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ringo-test/github-actions-common/actions/change-file@main
+      - uses: ringo-test/github-actions-common/actions/lint@main
+        with:
+          config-file: ""
+
+  validate-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ringo-test/github-actions-common/actions/change-file@main
+      - uses: ringo-test/github-actions-common/actions/validate-assets@main
+        with:
+          max-image-size-mb: 5
+          max-image-dimension: 2048
+          require-meta: true
+
+  detect-vietnamese:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ringo-test/github-actions-common/actions/change-file@main
+      - uses: ringo-test/github-actions-common/actions/detect-vietnamese@main
+        with:
+          exclude: ""
+          scan-scene: false
+          scan-prefab: false
