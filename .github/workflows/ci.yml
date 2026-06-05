@@ -17,6 +17,7 @@ jobs:
   checks:
     uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
     with:
+      action-repo: ringo-test/ringo-test/github-actions-common
       eslint-config-file: ""
       max-image-size-mb: 5
       max-image-dimension: 2048
