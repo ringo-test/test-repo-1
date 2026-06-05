@@ -21,5 +21,6 @@ jobs:
   pr:
     uses: ringo-test/github-actions-common/.github/workflows/pr.yml@main
     with:
+      action-repo: ringo-test/ringo-test/github-actions-common
       branch-prefixes: feature,fix,refactor,chore,hotfix,test,docs
       pr-prefixes: feature,fix,refactor,hotfix,docs
