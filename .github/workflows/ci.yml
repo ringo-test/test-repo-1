@@ -18,7 +18,7 @@ jobs:
     uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
     with:
       eslint-config-file: ""
-      max-image-size-mb: 5
+      max-image-size-mb: 4
       max-image-dimension: 2048
       require-meta: true
       detect-vietnamese-exclude: ""
