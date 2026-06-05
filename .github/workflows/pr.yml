@@ -21,7 +21,7 @@ jobs:
   validate-branch-and-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: ringo-test/github-actions-common/.github/actions/validate-branch-and-pr@main
+      - uses: ringo-test/github-actions-common/actions/validate-branch-and-pr@main
         with:
           branch-prefixes: feature,fix,refactor,chore,hotfix,test,docs
-          pr-prefixes: feature,fix,refactor,hotfix,docs
+          pr-prefixes: feature,fix,refactor,hotfix`,docs
