@@ -19,8 +19,8 @@ permissions:
 
 jobs:
   pr:
-    uses: ringo-test/github-actions-common/.github/workflows/pr.yml@main
+    uses: ringo-test/github-actions-commo/.github/workflows/pr.yml@main
     with:
-      action-repo: 'ringo-test/github-actions-common'
+      action-repo: 'ringo-test/github-actions-commo'
       branch-prefixes: feature,fix,refactor,chore,hotfix,test,docs
       pr-prefixes: feature,fix,refactor,hotfix,docs
