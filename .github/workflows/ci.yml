@@ -12,11 +12,13 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
+  id-token: write
 
 jobs:
   checks:
     uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
     with:
+      action-repo: 'ringo-test/github-actions-common'
       eslint-config-file: ""
       max-image-size-mb: 5
       max-image-dimension: 2048

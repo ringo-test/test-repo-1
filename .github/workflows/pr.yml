@@ -16,10 +16,12 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
+  id-token: write
 
 jobs:
   pr:
     uses: ringo-test/github-actions-common/.github/workflows/pr.yml@main
     with:
+      action-repo: 'ringo-test/github-actions-common'
       branch-prefixes: feature,fix,refactor,chore,hotfix,test,docs
       pr-prefixes: feature,fix,refactor,hotfix,docs
