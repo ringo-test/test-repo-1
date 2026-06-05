@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   checks:
-    uses: ringo-test/github-actions-common/.github/workflows/checks.yml@main
+    uses: ringo-test/github-actions-common/.github/workflows/checks.yml@test
     with:
       action-repo: 'ringo-test/github-actions-common'
       eslint-config-file: ""
